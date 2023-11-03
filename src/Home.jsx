@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 //import 'bootstrap-icons/fonts/bootstrap-icons.css';
 import Product from "./components/Product.jsx";
-import Header from "./Header.jsx";
+
 
 function Home(){
     const [name,setname] = useState("")
@@ -25,7 +25,7 @@ useEffect(()=>{
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="#">Product</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -54,6 +54,16 @@ useEffect(()=>{
           <h3 className="display-center">Welcome Home {name}</h3> 
         
 </div>
+
+            <div className='p-2 d-flex'>
+               <div className="w-50 p-2" >
+                <Product/>
+                </div>
+            
+            <div className="w-50 p-2">
+                <Product/>
+            </div>
+            </div>
         </div>
     )
 }
